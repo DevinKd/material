@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `materiel` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `materiel`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: localhost    Database: materiel
@@ -103,7 +101,7 @@ DROP TABLE IF EXISTS `materiel`;
 CREATE TABLE `materiel` (
   `idmateriel` bigint NOT NULL AUTO_INCREMENT,
   `uuid` varchar(45) NOT NULL,
-  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Inbound time or input to database time ',
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Inbound time or input to database time  or timeline',
   `name` varchar(100) NOT NULL,
   `type` varchar(45) NOT NULL COMMENT 'Category',
   `barcode` varchar(45) NOT NULL COMMENT 'Bar code',
@@ -266,7 +264,7 @@ CREATE TABLE `what` (
   PRIMARY KEY (`idwhat`,`uuid`),
   UNIQUE KEY `idwhat_UNIQUE` (`idwhat`),
   UNIQUE KEY `uuid_UNIQUE` (`uuid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -387,4 +385,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 10:40:51
+-- Dump completed on 2023-11-21 17:08:22
