@@ -118,13 +118,16 @@ CREATE TABLE `materiel` (
   `manufacture_date` datetime DEFAULT NULL COMMENT 'Production date ,Date of manufacture',
   `life_date` datetime DEFAULT NULL COMMENT 'Shelf life  or expiration data',
   `location` varchar(450) NOT NULL COMMENT 'where is location ',
-  `to_location` varchar(450) DEFAULT NULL,
   `owner` varchar(45) DEFAULT NULL COMMENT 'Who Owner',
-  `from_owner` varchar(45) DEFAULT NULL,
-  `to_owner` varchar(45) DEFAULT NULL,
+  `from` varchar(45) DEFAULT NULL COMMENT 'owner or address ',
+  `to` varchar(45) DEFAULT NULL COMMENT 'owner or address ',
+  `how` varchar(45) DEFAULT NULL COMMENT 'how from to owner or Logistics tracking number',
+  `who` varchar(45) DEFAULT NULL COMMENT 'who is recoder ',
   `what` varchar(450) DEFAULT NULL COMMENT 'What is the purpose of the material',
+  `when` datetime DEFAULT NULL,
+  `where` varchar(45) DEFAULT NULL,
+  `why` varchar(45) DEFAULT NULL COMMENT 'point why database uuid',
   `action` varchar(45) DEFAULT NULL COMMENT 'buy sell  input output ',
-  `how` varchar(45) DEFAULT NULL,
   `country` varchar(45) DEFAULT NULL COMMENT 'The country where the material was produced',
   `url` varchar(450) DEFAULT NULL COMMENT 'site url',
   `status` varchar(45) NOT NULL COMMENT 'Stock Status',
@@ -263,7 +266,7 @@ CREATE TABLE `what` (
   PRIMARY KEY (`idwhat`,`uuid`),
   UNIQUE KEY `idwhat_UNIQUE` (`idwhat`),
   UNIQUE KEY `uuid_UNIQUE` (`uuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -384,4 +387,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:33:24
+-- Dump completed on 2023-11-21 10:40:51
