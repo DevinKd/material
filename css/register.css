@@ -1,0 +1,32 @@
+.register_form
+{
+
+}
+
+
+.register_form_text
+{
+	font-size:150%;
+	left:0%;  
+}
+
+.register_form_input
+{
+	left:0%;
+	width:500px;
+	height:35px;
+	font-size:120%;
+}
+
+.register_form_input_submit
+{
+	font-size:150%;
+	width:200px;
+	height:35px;
+}
+
+.register_table_td_text
+{
+	width:150px;
+}
+

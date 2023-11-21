@@ -1,0 +1,32 @@
+.biosecurity_report_form
+{
+
+}
+
+
+.biosecurity_report_form_text
+{
+	font-size:150%;
+	left:0%;  
+}
+
+.biosecurity_report_form_input
+{
+	left:0%;
+	width:600px;
+	height:35px;
+	font-size:120%;
+}
+
+.biosecurity_report_form_input_submit
+{
+	font-size:150%;
+	width:200px;
+	height:35px;
+}
+
+.biosecurity_report_table_td_text
+{
+	width:150px;
+}
+

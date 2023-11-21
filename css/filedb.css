@@ -1,0 +1,69 @@
+.filedb_form
+{
+
+}
+
+
+.filedb_form_text
+{
+	font-size:150%;
+	left:0%;  
+}
+
+.filedb_form_input
+{
+	left:0%;
+	width:700px;
+	height:35px;
+	font-size:120%;
+}
+
+.filedb_form_input_submit
+{
+	font-size:150%;
+	width:200px;
+	height:35px;
+}
+
+.filedb_table_td_text
+{
+	width:150px;
+}
+
+.filedb_remark
+{
+		font-size:150%;
+		width:700px;
+		height:100px;
+}
+
+.filedb_table_tr_remark
+{
+		height:100px;
+}
+
+.filedb_input_file
+{
+	width:700px;
+	height:35px;
+}
+
+.select_file_button
+{
+	font-size:150%;
+	width:700px;
+	height:35px;
+}
+
+.selfile_button
+{
+	font-size:100%;
+	width:150px;
+	height:35px;
+}
+
+.input_filename
+{
+	width:700px;
+	height:35px;
+}
