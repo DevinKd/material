@@ -182,11 +182,10 @@ DROP TABLE IF EXISTS `status`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `status` (
   `idstatus` int NOT NULL AUTO_INCREMENT,
-  `uuid` varchar(45) NOT NULL,
   `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`idstatus`,`uuid`),
+  `time` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idstatus`,`name`),
   UNIQUE KEY `idstatus_UNIQUE` (`idstatus`),
-  UNIQUE KEY `uuid_UNIQUE` (`uuid`),
   UNIQUE KEY `name_UNIQUE` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -237,11 +236,21 @@ DROP TABLE IF EXISTS `url`;
 CREATE TABLE `url` (
   `idurl` int NOT NULL AUTO_INCREMENT,
   `uuid` varchar(45) NOT NULL,
-  `url` varchar(450) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`idurl`,`uuid`),
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `who` varchar(45) DEFAULT NULL COMMENT 'who create the link item .',
+  `what` varchar(100) NOT NULL COMMENT 'what the link item information ?',
+  `type` varchar(45) DEFAULT NULL,
+  `url` varchar(200) NOT NULL COMMENT 'where the URL address',
+  `logo` varchar(200) NOT NULL COMMENT 'where the URL logo path',
+  `when` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'the link create time .',
+  `status` varchar(45) DEFAULT NULL,
+  `remark` varchar(200) DEFAULT NULL,
+  `priority` int NOT NULL DEFAULT '0',
+  `where` varchar(45) NOT NULL DEFAULT 'china',
+  PRIMARY KEY (`idurl`,`uuid`,`time`),
+  UNIQUE KEY `uuid_UNIQUE` (`uuid`),
   UNIQUE KEY `idurl_UNIQUE` (`idurl`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='URL links .';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -387,4 +396,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 18:23:41
+-- Dump completed on 2023-11-22 15:52:00
