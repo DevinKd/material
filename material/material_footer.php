@@ -32,18 +32,14 @@ if (isset($_SERVER["SERVER_NAME"])&&strstr($_SERVER["SERVER_NAME"],"19871231.com
 }
 
 echo '
-<div class="main"></div>
-<footer><center>
-
-<div  style="font-size:100%;background-color:#686868;";>
-</br>
-	Copyright (C)  2018/06/22 - Present , <a href="https://github.com/red-arrows">
-	<font color="white"> Red-Arrow </font></a><font color="white">Intelligent Technology Co. Ltd. </font>
-	<a href="https://beian.miit.gov.cn/" target="_blank" class="text"><font color="white">'.$ICP.'</font><br></a>
-</br>
-</div>
-
-</center></footer>';
-
+	<footer><center>
+		<div  style="font-size:100%;background-color:#686868;";>
+			</br>
+				Copyright (C)  2018/06/22 - Present , <a href="https://github.com/red-arrows">
+				<font color="white"> Red-Arrow </font></a><font color="white">Intelligent Technology Co. Ltd. </font>
+				<a href="https://beian.miit.gov.cn/" target="_blank" class="text"><font color="white">'.$ICP.'</font><br></a>
+			</br>
+		</div>
+	</center></footer>';
 ?>
 

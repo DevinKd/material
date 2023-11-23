@@ -2,6 +2,74 @@
 
 class Cpage
 {
+	public $html =[]; //<html> </html> 
+	public $head =[]; //<head> </head>
+	public $body =[]; //<body> </body>
+
+	public $js=[];
+	public $css=[];
+
+	function push_html($html_str)
+	{
+		array_push($this->html,$html_str);
+	}
+
+	function push_head($head_str)
+	{
+		array_push($this->head,$head_str);
+	}
+
+	function push_body($body_str)
+	{
+		array_push($this->body,$body_str);
+	}
+
+	function push_js($js_str)
+	{
+		array_push($this->js,$js_str);
+	}
+
+	function push_css($css_str)
+	{
+		array_push($this->css,$css_str);
+	}
+	
+	function echo_page($pagefile="",$title="Cpage",$head="",$body_header="header.php",$footer="footer.php")
+	{
+		echo '
+		<html>
+		<head>
+			<title>'.$title.'</title>';
+
+		foreach($this->head as $h=>$head_value)
+		{
+		    echo '	'.$head_value;
+		}
+
+		if($head!="") require_once($head);
+
+		echo '
+		</head>
+		<body>
+		<div class="main">';
+
+		if($body_header!="") require_once($body_header);
+
+		foreach($this->body as $b=>$body_value)
+		{
+		    echo '	'.$body_value;
+		}
+
+		if($pagefile!="") require_once($pagefile);
+
+		echo '</div>';
+		if($footer!="") require_once($footer);
+		echo '
+		</body>
+		</html>';
+
+	}
+
 	function main_page($img="",$pagefile="",$link="",$href="",$text="",$width=110,$height=110,$footer="footer.php",$header="header.php")
 	{
 		echo '<html><body><div class="main">';
