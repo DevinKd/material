@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `size` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `size`;
+CREATE DATABASE  IF NOT EXISTS `disease` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `disease`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
--- Host: localhost    Database: size
+-- Host: localhost    Database: disease
 -- ------------------------------------------------------
 -- Server version	8.0.30
 
@@ -18,44 +18,33 @@ USE `size`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `size`
+-- Table structure for table `disease`
 --
 
-DROP TABLE IF EXISTS `size`;
+DROP TABLE IF EXISTS `disease`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `size` (
-  `idsize` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `disease` (
+  `iddisease` int NOT NULL AUTO_INCREMENT,
   `uuid` varchar(45) NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `name` varchar(200) NOT NULL DEFAULT 'name',
-  `type` varchar(45) NOT NULL DEFAULT 'classification' COMMENT 'classification',
-  `shape` varchar(45) NOT NULL DEFAULT 'cuboid',
-  `form` varchar(45) NOT NULL DEFAULT 'solid' COMMENT 'Substance is solid, liquid, and gas',
-  `length` double DEFAULT NULL,
-  `width` double DEFAULT NULL,
-  `high` double DEFAULT NULL,
-  `radius` double DEFAULT NULL,
-  `size_unit` double NOT NULL DEFAULT '1',
-  `status` varchar(45) NOT NULL DEFAULT 'normal',
-  `url` varchar(450) DEFAULT NULL COMMENT 'image URL  or doc URL',
-  `who` varchar(45) NOT NULL DEFAULT 'hunter',
-  `priority` int NOT NULL DEFAULT '0',
+  `name` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL,
   `description` varchar(450) DEFAULT NULL,
   `remark` varchar(450) DEFAULT NULL,
-  PRIMARY KEY (`idsize`,`uuid`,`time`),
-  UNIQUE KEY `idsize_UNIQUE` (`idsize`),
+  PRIMARY KEY (`iddisease`,`uuid`,`time`),
+  UNIQUE KEY `iddisease_UNIQUE` (`iddisease`),
   UNIQUE KEY `uuid_UNIQUE` (`uuid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='sizeof physics';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `size`
+-- Dumping data for table `disease`
 --
 
-LOCK TABLES `size` WRITE;
-/*!40000 ALTER TABLE `size` DISABLE KEYS */;
-/*!40000 ALTER TABLE `size` ENABLE KEYS */;
+LOCK TABLES `disease` WRITE;
+/*!40000 ALTER TABLE `disease` DISABLE KEYS */;
+/*!40000 ALTER TABLE `disease` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -67,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-27 16:18:25
+-- Dump completed on 2023-12-15 14:14:03
