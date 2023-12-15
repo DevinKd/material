@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `tcm`;
 CREATE TABLE `tcm` (
   `idtcm` int NOT NULL AUTO_INCREMENT,
   `uuid` varchar(45) NOT NULL,
-  `time` varchar(45) NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `disease` varchar(45) NOT NULL,
   `prescriptions` varchar(45) NOT NULL,
   `name` varchar(45) NOT NULL,
@@ -36,6 +36,19 @@ CREATE TABLE `tcm` (
   `author` varchar(45) NOT NULL DEFAULT 'author',
   `description` varchar(450) DEFAULT NULL,
   `remark` varchar(450) DEFAULT NULL,
+  `priority` int NOT NULL DEFAULT '0',
+  `status` varchar(45) NOT NULL DEFAULT 'normal',
+  `when` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `where` varchar(45) NOT NULL DEFAULT 'where',
+  `who` varchar(45) NOT NULL DEFAULT 'who',
+  `what` varchar(450) NOT NULL DEFAULT 'what',
+  `why` varchar(450) NOT NULL DEFAULT 'why',
+  `how` varchar(450) NOT NULL DEFAULT 'how',
+  `file` varchar(450) DEFAULT NULL,
+  `audio` varchar(450) DEFAULT NULL,
+  `vedio` varchar(450) DEFAULT NULL,
+  `url` varchar(450) DEFAULT NULL,
+  `image` varchar(450) DEFAULT NULL,
   PRIMARY KEY (`idtcm`,`uuid`,`time`),
   UNIQUE KEY `idtcm_UNIQUE` (`idtcm`),
   UNIQUE KEY `uuid_UNIQUE` (`uuid`)
@@ -60,4 +73,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-12-15 14:08:48
+-- Dump completed on 2023-12-15 14:32:03
