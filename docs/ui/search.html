@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>搜索框网页</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      margin: 0;  
+      padding: 20px;  
+    }  
+  
+    h1 {  
+      text-align: center;  
+    }  
+  
+    #search-container {  
+      text-align: center;  
+      margin-top: 20px;  
+    }  
+  
+    #search-input {  
+      width: 300px;  
+      padding: 10px;  
+      font-size: 16px;  
+    }  
+  
+    #search-button {  
+      padding: 10px 20px;  
+      font-size: 16px;  
+      background-color: #4CAF50;  
+      color: white;  
+      border: none;  
+      cursor: pointer;  
+    }  
+  
+    #search-button:hover {  
+      background-color: #45a049;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <h1>搜索框网页</h1>  
+  
+  <div id="search-container">  
+    <input type="text" id="search-input" placeholder="输入搜索关键词">  
+    <button id="search-button">搜索</button>  
+  </div>  
+  
+  <script>  
+    document.getElementById('search-button').addEventListener('click', function() {  
+      var searchInput = document.getElementById('search-input').value;  
+      // 这里可以添加处理搜索逻辑的代码，例如将搜索关键词发送到服务器进行搜索  
+      alert('你搜索了：' + searchInput);  
+    });  
+  </script>  
+</body>  
+</html>
