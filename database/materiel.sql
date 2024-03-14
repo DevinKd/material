@@ -133,6 +133,7 @@ CREATE TABLE `materiel` (
   `status` varchar(45) NOT NULL COMMENT 'Stock Status',
   `remark` varchar(450) DEFAULT NULL,
   `priority` int NOT NULL DEFAULT '0',
+  `partial` varchar(45) DEFAULT NULL COMMENT 'Define a material belongs to product',
   PRIMARY KEY (`idmateriel`,`uuid`,`time`,`name`,`type`,`barcode`,`serial_number`,`part_number`,`date_code`,`priority`),
   UNIQUE KEY `idmateriel_UNIQUE` (`idmateriel`),
   UNIQUE KEY `uuid_UNIQUE` (`uuid`)
@@ -396,4 +397,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-22 16:17:58
+-- Dump completed on 2024-03-14 15:43:55
