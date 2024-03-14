@@ -1,0 +1,20 @@
+CREATE TABLE `stock` (
+  `idstock` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(45) NOT NULL,
+  `number` varchar(45) NOT NULL COMMENT 'stock number',
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `idcard` varchar(45) DEFAULT NULL COMMENT 'ID card',
+  `owner` varchar(45) DEFAULT NULL COMMENT 'name',
+  `amount` varchar(45) DEFAULT NULL,
+  `url` varchar(200) DEFAULT NULL,
+  `value` double unsigned DEFAULT '1' COMMENT 'Trading price',
+  `price` double unsigned DEFAULT '1',
+  `dividend` double NOT NULL DEFAULT '0',
+  `status` varchar(45) NOT NULL DEFAULT 'locked',
+  `remark` text,
+  `priority` int(11) NOT NULL DEFAULT '0',
+  `when` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idstock`,`uuid`,`number`),
+  UNIQUE KEY `idstock_UNIQUE` (`idstock`),
+  UNIQUE KEY `uuid_UNIQUE` (`uuid`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

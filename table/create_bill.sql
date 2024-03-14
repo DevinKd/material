@@ -1,0 +1,23 @@
+CREATE TABLE `bill` (
+  `idbill` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(45) NOT NULL,
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `where` varchar(45) DEFAULT NULL,
+  `who` varchar(45) DEFAULT NULL,
+  `type` varchar(45) DEFAULT NULL COMMENT 'IN/OUT',
+  `item` varchar(45) DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `file` varchar(45) DEFAULT NULL,
+  `imgage` varchar(45) DEFAULT NULL,
+  `vedio` varchar(45) DEFAULT NULL,
+  `audio` varchar(45) DEFAULT NULL,
+  `from` varchar(45) DEFAULT NULL COMMENT 'source',
+  `to` varchar(45) DEFAULT NULL COMMENT 'dir',
+  `status` varchar(45) DEFAULT NULL,
+  `remark` varchar(45) DEFAULT NULL,
+  `quantity` varchar(45) DEFAULT NULL,
+  `univalent` varchar(45) DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  `approve` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idbill`,`uuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='bill of company';
